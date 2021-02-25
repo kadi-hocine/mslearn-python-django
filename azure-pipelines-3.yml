@@ -8,19 +8,19 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'f7aabe09-0cef-42ba-b5c9-7fe13c90e4df'
+  azureServiceConnectionId: '8b9ffa2d-53f4-448f-8114-7a54e0024052'
 
   # Web app name
-  webAppName: 'python-cicd-aleks'
+  webAppName: 'python-cicd-11886'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'python-cicd-aleks'
+  environmentName: 'python-cicd-11886'
 
   # Project root folder. Point to the folder containing manage.py file.
-  projectRoot: $(System.DefaultWorkingDirectory)/application
+  projectRoot: $(System.DefaultWorkingDirectory)/Application
 
   # Python version: 3.7
   pythonVersion: '3.7'
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : python-cicd-aleks'
+            displayName: 'Deploy Azure Web App : python-cicd-11886'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
